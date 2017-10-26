@@ -14,8 +14,13 @@
 #import "SSHTTPManager.h"
 #import "MJExtension.h"
 #import "UIViewController+YuYue.h"
+#import "UIColor+HxColor.h"
+#import "NSString+BaseString.h"
 
 #import "SSMacro.h"
+
+#import "SSUserManager.h"
+#import "SSLocation.h"
 
 static CGFloat StatuBarHeight = 20;
 static CGFloat NavigationBarHeight = 64;

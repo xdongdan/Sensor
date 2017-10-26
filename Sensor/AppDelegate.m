@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "SSMacro.h"
+#import "NSString+BaseString.h"
+#import "SSLocation.h"
+#import "UIColor+HxColor.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +26,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[MainTabBarController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    [[SSLocation sharedLocation] startLocation];
+    [self setupAppearance];
+    
     return YES;
+}
+
+-(void)setupAppearance{
+    [[UINavigationBar appearance] setBarTintColor:[UIColor hxStringToColor:@"397Ec5"]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"ic_back"]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UIBarButtonItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
 }
 
 

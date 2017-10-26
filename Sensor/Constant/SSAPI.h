@@ -10,7 +10,7 @@
 #define SSAPI_h
 
 // host
-static NSString *kApiHost = @"http://outsourcing.kilcreapark.com";
+static NSString *kApiHost = @"https://outsourcing.kilcreapark.com";
 
 // 注册
 static NSString *kRegister = @"/user/register";
@@ -28,7 +28,7 @@ static NSString *kResetPwd = @"/user/sendVerifyCode";
 static NSString *kForgetPwd = @"/user/forgetPwd";
 
 // 登出
-static NSString *kLoginOut = @"/user/forgetPwd";
+static NSString *kLoginOut = @"/user/loginOut";
 
 // 获取天气
 static NSString *kGetWeatherData = @"/data/getWeatherdata";

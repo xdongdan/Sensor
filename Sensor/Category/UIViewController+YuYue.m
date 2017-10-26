@@ -31,6 +31,14 @@
     hud.removeFromSuperViewOnHide = YES;
 }
 
+- (void)yuy_hudAuto:(NSString*)text{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = text;
+    hud.mode = MBProgressHUDModeText;
+    hud.removeFromSuperViewOnHide = YES;
+    [hud hide:YES afterDelay:1.0];
+}
+
 - (void)yuy_hudHide{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }

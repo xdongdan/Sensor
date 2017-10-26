@@ -66,13 +66,6 @@ __strong static SSHTTPManager *sharedObject;
             failure(sessionTask, error);
         } else {
             success(sessionTask, responseObject);
-            NSString * codeString = responseObject[@"code"];
-            int code =[codeString intValue];
-//            if(code ==40005){
-//                UINavigationController *navc = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-//                LoginViewController *loginVC = [[LoginViewController alloc] init];
-//                [navc presentViewController:[[UINavigationController alloc] initWithRootViewController:loginVC] animated:YES completion:nil];
-//            }
         }
     }];
     [sessionTask resume];

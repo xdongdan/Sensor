@@ -18,6 +18,7 @@
 - (void)yuy_hudShowLoading;
 - (void)yuy_hudHide;
 - (void)yuy_hudAllHide;
+- (void)yuy_hudAuto:(NSString*)text;
 
 - (void)hiddenTabBar;
 - (void)showTabBar;
