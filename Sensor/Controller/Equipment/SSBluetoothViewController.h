@@ -7,6 +7,7 @@
 //
 
 #import "SSBaseViewController.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @interface SSBluetoothViewController : SSBaseViewController
 

@@ -8,7 +8,6 @@
 
 #import "UIViewController+YuYue.h"
 
-#import "MBProgressHUD.h"
 
 @implementation UIViewController (YuYue)
 

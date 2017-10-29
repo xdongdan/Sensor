@@ -20,6 +20,8 @@ static NSString *kPasswordData = @"Password";       // 记住密码后保存的�
 static NSString *kLocationCity = @"LocationCity";   // 定位城市
 static NSString *kWeatherData = @"WeatherData";     // 天气数据
 
+static NSString *kPeripheral = @"Peripheral";   // 空气净化器外设 连接后保存，下次打开直接连接
+
 #ifndef ScreenWidth
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #endif

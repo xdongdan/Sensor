@@ -48,6 +48,8 @@
     self.equipmentNavc.tabBarItem.image = [UIImage imageNamed:@"ic_tab_ck_nor"];
     
     self.viewControllers = @[self.userNavc, self.homeNavc, self.equipmentNavc];
+    
+    self.selectedIndex = 1;
 }
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(nonnull UIViewController *)viewController {

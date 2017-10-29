@@ -22,6 +22,9 @@
 #import "SSUserManager.h"
 #import "SSLocation.h"
 
+#import "STLoopProgressView.h"
+#import "STLoopProgressView+BaseConfiguration.h"
+
 static CGFloat StatuBarHeight = 20;
 static CGFloat NavigationBarHeight = 64;
 static CGFloat TabBarHeight = 49;

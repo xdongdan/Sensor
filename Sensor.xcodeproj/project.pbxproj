@@ -101,6 +101,10 @@
 		D166496A1F9D9AE100F2A656 /* SSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16649681F9D9AE100F2A656 /* SSLoginViewController.xib */; };
 		D17AEFA81FA1E16F001C52E0 /* SSBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AEFA61FA1E16F001C52E0 /* SSBluetoothViewController.m */; };
 		D17AEFA91FA1E16F001C52E0 /* SSBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17AEFA71FA1E16F001C52E0 /* SSBluetoothViewController.xib */; };
+		D17AEFAE1FA2CBF3001C52E0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17AEFAD1FA2CBF2001C52E0 /* CoreBluetooth.framework */; };
+		D17AEFB21FA2FD91001C52E0 /* SSBlueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AEFB01FA2FD91001C52E0 /* SSBlueTableViewCell.m */; };
+		D17AEFB31FA2FD91001C52E0 /* SSBlueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17AEFB11FA2FD91001C52E0 /* SSBlueTableViewCell.xib */; };
+		D17AEFBC1FA59A26001C52E0 /* SSBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AEFBB1FA59A26001C52E0 /* SSBLEManager.m */; };
 		D1C0B6EB1FA05B0C00222DC1 /* SSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0B6EA1FA05B0C00222DC1 /* SSLocation.m */; };
 		D1C0B6EC1FA06A1B00222DC1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C0B6381FA046E600222DC1 /* CoreLocation.framework */; };
 		D1C0B6EF1FA06EBB00222DC1 /* SSWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0B6EE1FA06EBB00222DC1 /* SSWeather.m */; };
@@ -295,6 +299,12 @@
 		D17AEFA51FA1E16F001C52E0 /* SSBluetoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBluetoothViewController.h; sourceTree = "<group>"; };
 		D17AEFA61FA1E16F001C52E0 /* SSBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBluetoothViewController.m; sourceTree = "<group>"; };
 		D17AEFA71FA1E16F001C52E0 /* SSBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSBluetoothViewController.xib; sourceTree = "<group>"; };
+		D17AEFAD1FA2CBF2001C52E0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D17AEFAF1FA2FD91001C52E0 /* SSBlueTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBlueTableViewCell.h; sourceTree = "<group>"; };
+		D17AEFB01FA2FD91001C52E0 /* SSBlueTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBlueTableViewCell.m; sourceTree = "<group>"; };
+		D17AEFB11FA2FD91001C52E0 /* SSBlueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSBlueTableViewCell.xib; sourceTree = "<group>"; };
+		D17AEFBA1FA59A26001C52E0 /* SSBLEManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBLEManager.h; sourceTree = "<group>"; };
+		D17AEFBB1FA59A26001C52E0 /* SSBLEManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBLEManager.m; sourceTree = "<group>"; };
 		D1C0B6321F9F78D300222DC1 /* STLoopProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STLoopProgressView.m; sourceTree = "<group>"; };
 		D1C0B6331F9F78D300222DC1 /* STLoopProgressView+BaseConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STLoopProgressView+BaseConfiguration.h"; sourceTree = "<group>"; };
 		D1C0B6341F9F78D300222DC1 /* STLoopProgressView+BaseConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "STLoopProgressView+BaseConfiguration.m"; sourceTree = "<group>"; };
@@ -318,6 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17AEFAE1FA2CBF3001C52E0 /* CoreBluetooth.framework in Frameworks */,
 				D1C0B6EC1FA06A1B00222DC1 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +440,8 @@
 				D13A71491F9F0C09008B9EBA /* SSUserManager.h */,
 				D13A714A1F9F0C09008B9EBA /* SSUserManager.m */,
 				D15895F41FA1835C00F45647 /* Public.h */,
+				D17AEFBA1FA59A26001C52E0 /* SSBLEManager.h */,
+				D17AEFBB1FA59A26001C52E0 /* SSBLEManager.m */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -785,6 +798,9 @@
 		D16649461F9D91F800F2A656 /* Equipment */ = {
 			isa = PBXGroup;
 			children = (
+				D17AEFAF1FA2FD91001C52E0 /* SSBlueTableViewCell.h */,
+				D17AEFB01FA2FD91001C52E0 /* SSBlueTableViewCell.m */,
+				D17AEFB11FA2FD91001C52E0 /* SSBlueTableViewCell.xib */,
 			);
 			path = Equipment;
 			sourceTree = "<group>";
@@ -803,6 +819,7 @@
 		D1C0B6361FA046DB00222DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D17AEFAD1FA2CBF2001C52E0 /* CoreBluetooth.framework */,
 				D1C0B6421FA0470900222DC1 /* Security.framework */,
 				D1C0B6401FA0470200222DC1 /* CoreGraphics.framework */,
 				D1C0B63E1FA046FA00222DC1 /* SystemConfiguration.framework */,
@@ -854,6 +871,11 @@
 					D16648511F9D8FF700F2A656 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -886,6 +908,7 @@
 				D15896171FA18A3D00F45647 /* HeadView.xib in Resources */,
 				D15896161FA18A3200F45647 /* CityViewCell.xib in Resources */,
 				D13A71501F9F38CE008B9EBA /* SSFindPasswordViewController.xib in Resources */,
+				D17AEFB31FA2FD91001C52E0 /* SSBlueTableViewCell.xib in Resources */,
 				D16648621F9D8FF700F2A656 /* LaunchScreen.storyboard in Resources */,
 				D166485F1F9D8FF700F2A656 /* Assets.xcassets in Resources */,
 				D166491C1F9D90E200F2A656 /* MBProgressHUD.bundle in Resources */,
@@ -937,11 +960,13 @@
 				D166495A1F9D9A6800F2A656 /* SSEquipmentViewController.m in Sources */,
 				D15895ED1FA1833900F45647 /* SearchResult.m in Sources */,
 				D16649691F9D9AE100F2A656 /* SSLoginViewController.m in Sources */,
+				D17AEFB21FA2FD91001C52E0 /* SSBlueTableViewCell.m in Sources */,
 				D166493A1F9D90E200F2A656 /* UIViewController+YuYue.m in Sources */,
 				D15895F21FA1834500F45647 /* NBSearchController.m in Sources */,
 				D13A714F1F9F38CE008B9EBA /* SSFindPasswordViewController.m in Sources */,
 				D16649241F9D90E200F2A656 /* NSObject+MJCoding.m in Sources */,
 				D16649001F9D90E200F2A656 /* AFNetworkReachabilityManager.m in Sources */,
+				D17AEFBC1FA59A26001C52E0 /* SSBLEManager.m in Sources */,
 				D16649041F9D90E200F2A656 /* AFURLResponseSerialization.m in Sources */,
 				D16649231F9D90E200F2A656 /* NSObject+MJClass.m in Sources */,
 				D16649131F9D90E200F2A656 /* IQKeyboardManager.m in Sources */,

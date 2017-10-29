@@ -263,4 +263,24 @@ NSString* NoEmptyString(id obj){
     return CHECK_VALID_STRING(str);
 }
 
++ (NSString *)convertDataToHexStr:(NSData *)data {
+    Byte *bytes = (Byte *)[data bytes];
+    //下面是Byte 转换为16进制。
+    NSString *hexStr=@"";
+    for(int i=0;i<[data length];i++)
+        
+    {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        
+        if([newHexStr length]==1)
+            
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        
+        else
+            
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+    }
+    return hexStr;
+}
+
 @end

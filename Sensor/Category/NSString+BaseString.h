@@ -43,4 +43,7 @@ NSString* NoEmptyString(id obj);
 /// 加密显示字符串，[@"123456789" securyForm:2 to:7 withChar:'*'] -> 12******89
 - (NSString*)securyForm:(NSUInteger)form to:(NSUInteger)to withChar:(char)replaceChar;
 
+// 将NSData类型的数据转换为十六进制的字符串
++ (NSString *)convertDataToHexStr:(NSData *)data;
+
 @end

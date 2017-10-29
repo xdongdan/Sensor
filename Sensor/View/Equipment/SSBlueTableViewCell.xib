@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" id="KGk-i7-Jjw" customClass="SSBlueTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bluetooth_searching_black" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-bA-o29">
+                        <rect key="frame" x="20" y="3" width="36" height="36"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dr-NH-NZN">
+                        <rect key="frame" x="66" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未连接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-6N-JAf">
+                        <rect key="frame" x="258" y="11" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n2N-bA-o29" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1qh-ZL-4ue"/>
+                    <constraint firstItem="hLT-6N-JAf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2oS-Kl-5qw"/>
+                    <constraint firstItem="0Dr-NH-NZN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9S6-Wc-zQ4"/>
+                    <constraint firstItem="0Dr-NH-NZN" firstAttribute="leading" secondItem="n2N-bA-o29" secondAttribute="trailing" constant="10" id="NWg-Ko-yfi"/>
+                    <constraint firstItem="n2N-bA-o29" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZaQ-69-N0H"/>
+                    <constraint firstAttribute="trailing" secondItem="hLT-6N-JAf" secondAttribute="trailing" constant="10" id="u6o-sL-YBm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="connect" destination="hLT-6N-JAf" id="9gr-Qn-tpD"/>
+                <outlet property="name" destination="0Dr-NH-NZN" id="MMO-KW-Z8W"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_bluetooth_searching_black" width="36" height="36"/>
+    </resources>
+</document>
