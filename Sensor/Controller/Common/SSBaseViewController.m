@@ -7,6 +7,7 @@
 //
 
 #import "SSBaseViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface SSBaseViewController ()
 
@@ -25,12 +26,11 @@
     
     self.sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [SSHTTPManager sharedManager].sessionManager = self.sessionManager;
-
-    // 注册登录成功与取消登录的通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSucess) name:kLoginSucess object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginCancel) name:kLoginCancel object:nil];
     
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = item;
+    
+   
     // Do any additional setup after loading the view.
 }
 
@@ -49,17 +49,6 @@
         [task cancel];
     }
 }
-
-
-- (void)loginSucess {
-    NSLog(@"sucess");
-}
-
-
-- (void)loginCancel {
-    NSLog(@"cancel");
-}
-
 
 - (void)addLeftBarButtonItemWithTitle:(NSString *)title block:(leftBarButtonItemTapBlock)block {
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(leftBarTaped)];
@@ -100,25 +89,6 @@
 - (void)backButtonTapped {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-- (void)login {
-//    LoginViewController *loginVC = [[LoginViewController alloc] init];
-//    UINavigationController *navC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-//    [navC presentViewController:[[UINavigationController alloc] initWithRootViewController:loginVC] animated:YES completion:^{
-//
-//    }];
-}
-
-- (BOOL)isLogined{
-//    if ([YUYUserInfo sharedManager].isLogin) {
-//        return YES;
-//    }else{
-//        [self login];
-//        return NO;
-//    }
-    return YES;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

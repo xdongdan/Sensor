@@ -12,12 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSHomeViewController">
             <connections>
-                <outlet property="bottomConstraint" destination="cCE-BM-NOj" id="4ec-bv-VQV"/>
+                <outlet property="bottomConstraint" destination="FOj-aR-JMb" id="a2I-PL-Ryk"/>
                 <outlet property="location" destination="bkv-Ls-a2d" id="8EV-Gq-Yrm"/>
                 <outlet property="pm2_5" destination="zgP-WK-qi8" id="usL-RS-Bpp"/>
                 <outlet property="progressView" destination="NqL-0B-b6q" id="NnT-xW-H3W"/>
                 <outlet property="quality" destination="DJS-q8-6ct" id="KYb-nj-v4d"/>
                 <outlet property="temp" destination="JuF-Vv-Djp" id="Y1W-ph-Rpz"/>
+                <outlet property="topConstraint" destination="N4r-9P-6BC" id="wWE-J6-x7Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weather" destination="1hl-ai-jp8" id="7Dh-l4-Q4W"/>
                 <outlet property="wind" destination="jVG-f9-Z8W" id="5vX-ml-SAG"/>
@@ -29,26 +30,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-0B-b6q" customClass="STLoopProgressView">
-                    <rect key="frame" x="30" y="100" width="315" height="315"/>
+                    <rect key="frame" x="30" y="50" width="315" height="315"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="NqL-0B-b6q" secondAttribute="height" multiplier="1:1" id="Eqg-c8-FEf"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-WK-qi8">
-                    <rect key="frame" x="187" y="200" width="0.0" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                    <rect key="frame" x="187.5" y="110" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJS-q8-6ct">
-                    <rect key="frame" x="187.5" y="250" width="0.0" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                    <rect key="frame" x="188" y="130" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当地空气质量指数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-Lq-veG">
-                    <rect key="frame" x="126" y="328.5" width="123" height="18"/>
+                    <rect key="frame" x="126" y="278.5" width="123" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -96,12 +97,12 @@
                 <constraint firstItem="1hl-ai-jp8" firstAttribute="top" secondItem="JuF-Vv-Djp" secondAttribute="bottom" constant="8" id="2qw-nU-MPU"/>
                 <constraint firstItem="jVG-f9-Z8W" firstAttribute="top" secondItem="1hl-ai-jp8" secondAttribute="bottom" constant="8" id="5w9-33-hRq"/>
                 <constraint firstItem="bkv-Ls-a2d" firstAttribute="centerY" secondItem="1hl-ai-jp8" secondAttribute="centerY" id="EgO-ga-6ye"/>
-                <constraint firstItem="DJS-q8-6ct" firstAttribute="top" secondItem="zgP-WK-qi8" secondAttribute="bottom" constant="50" id="FOj-aR-JMb"/>
+                <constraint firstItem="DJS-q8-6ct" firstAttribute="top" secondItem="zgP-WK-qi8" secondAttribute="bottom" constant="20" id="FOj-aR-JMb"/>
                 <constraint firstItem="wQC-5c-hoR" firstAttribute="leading" secondItem="bkA-f1-8ao" secondAttribute="leading" id="LOX-BG-238"/>
-                <constraint firstItem="zgP-WK-qi8" firstAttribute="top" secondItem="NqL-0B-b6q" secondAttribute="top" constant="100" id="N4r-9P-6BC"/>
+                <constraint firstItem="zgP-WK-qi8" firstAttribute="top" secondItem="NqL-0B-b6q" secondAttribute="top" constant="60" id="N4r-9P-6BC"/>
                 <constraint firstItem="QVw-Lq-veG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UsS-GH-RGP"/>
                 <constraint firstItem="zgP-WK-qi8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YXW-rW-eaK"/>
-                <constraint firstItem="NqL-0B-b6q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="YeT-cb-BRY"/>
+                <constraint firstItem="NqL-0B-b6q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="YeT-cb-BRY"/>
                 <constraint firstItem="wQC-5c-hoR" firstAttribute="trailing" secondItem="bkv-Ls-a2d" secondAttribute="trailing" id="b5T-NG-arE"/>
                 <constraint firstItem="QVw-Lq-veG" firstAttribute="centerY" secondItem="NqL-0B-b6q" secondAttribute="centerY" constant="80" id="cCE-BM-NOj"/>
                 <constraint firstItem="DJS-q8-6ct" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="etw-0u-J3h"/>

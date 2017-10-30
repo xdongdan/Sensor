@@ -69,7 +69,8 @@
     [self initTableView];
     [self initSearchController];
     
-    self.navigationController.navigationBar.barTintColor=RGB(44, 166, 248);
+    self.title = @"选择城市";
+    
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
     titleAttr[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:titleAttr];

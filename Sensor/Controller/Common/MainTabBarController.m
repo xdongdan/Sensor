@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.delegate = self;
-    [self.tabBar setTintColor:[UIColor hxStringToColor:@"4692D0"]];
+    [self.tabBar setTintColor:[UIColor hxStringToColor:@"2366C4"]];
     
     SSUserSpaceViewController *userVC = [[SSUserSpaceViewController alloc] init];
     self.userNavc = [[UINavigationController alloc] initWithRootViewController:userVC];

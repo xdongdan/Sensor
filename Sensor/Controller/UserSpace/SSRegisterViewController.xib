@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T7-Pa-fet">
-                    <rect key="frame" x="30" y="184" width="315" height="200"/>
+                    <rect key="frame" x="30" y="143.5" width="315" height="200"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVI-qe-UVf">
                             <rect key="frame" x="0.0" y="0.0" width="315" height="51"/>
@@ -87,7 +87,7 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="获取验证码">
-                                        <color key="titleColor" red="0.27450980392156865" green="0.5725490196078431" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleColor" red="0.13725490196078433" green="0.40000000000000002" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="getCode:" destination="-1" eventType="touchUpInside" id="Dps-B9-EYE"/>
@@ -204,7 +204,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOk-cG-aYz">
                     <rect key="frame" x="30" y="487" width="315" height="50"/>
-                    <color key="backgroundColor" red="0.27450980392156865" green="0.5725490196078431" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.13725490196078433" green="0.40000000000000002" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Tuj-IY-Xkf"/>
                     </constraints>
@@ -246,12 +246,12 @@
                 <constraint firstAttribute="trailing" secondItem="6T7-Pa-fet" secondAttribute="trailing" constant="30" id="8fD-BO-hzQ"/>
                 <constraint firstItem="3AD-3l-jks" firstAttribute="trailing" secondItem="YSz-sd-Xbc" secondAttribute="trailing" id="CMT-r3-wOJ"/>
                 <constraint firstItem="6T7-Pa-fet" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="CQW-vg-zca"/>
+                <constraint firstItem="6T7-Pa-fet" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-90" id="GJ6-Jk-aPl"/>
                 <constraint firstItem="YSz-sd-Xbc" firstAttribute="leading" secondItem="mvv-df-SRG" secondAttribute="trailing" id="SWl-qU-nYM"/>
                 <constraint firstAttribute="trailing" secondItem="oOk-cG-aYz" secondAttribute="trailing" constant="30" id="TUI-hr-isM"/>
                 <constraint firstItem="3AD-3l-jks" firstAttribute="top" secondItem="oOk-cG-aYz" secondAttribute="bottom" id="W7l-2K-LyE"/>
                 <constraint firstItem="3AD-3l-jks" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ysh-qA-h4b"/>
                 <constraint firstAttribute="bottom" secondItem="oOk-cG-aYz" secondAttribute="bottom" constant="130" id="eEa-tS-c24"/>
-                <constraint firstItem="6T7-Pa-fet" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="184" id="kkp-gC-sd3"/>
                 <constraint firstItem="oOk-cG-aYz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="lO0-WP-eUA"/>
                 <constraint firstItem="YSz-sd-Xbc" firstAttribute="centerY" secondItem="mvv-df-SRG" secondAttribute="centerY" id="y3c-h6-08C"/>
                 <constraint firstItem="3AD-3l-jks" firstAttribute="leading" secondItem="mvv-df-SRG" secondAttribute="leading" id="yKz-3m-pBz"/>

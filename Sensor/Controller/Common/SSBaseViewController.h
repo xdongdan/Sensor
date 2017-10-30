@@ -52,9 +52,4 @@ typedef void(^errorBlock)(void);
 
 - (void)backButtonTapped;
 
-- (void)login;
-- (BOOL)isLogined;
-- (void)loginSucess;
-- (void)loginCancel;
-
 @end

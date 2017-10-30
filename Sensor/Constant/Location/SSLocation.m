@@ -83,7 +83,6 @@ __strong static SSLocation *sharedObject;
                 [[NSUserDefaults standardUserDefaults] setValue:city forKey:kLocationCity];
                 [[NSUserDefaults standardUserDefaults] synchronize];
             }
-            NSLog(@"----%@", city);
             // 获取之后就停止更新
             [self.locationManager stopUpdatingLocation];
         } else if (error == nil && placemarks.count == 0) {
@@ -91,13 +90,14 @@ __strong static SSLocation *sharedObject;
         } else if (!error) {
             NSLog(@"%@", error);
         }
+        [[NSNotificationCenter defaultCenter] postNotificationName:kGetLocationNotify object:nil];
     }];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     if (error.code == kCLErrorDenied) {
         // 提示用户出错原因
-        NSLog(@"%@", error);
+        [[NSNotificationCenter defaultCenter] postNotificationName:kGetLocationNotify object:nil];
     }
 }
 

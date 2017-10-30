@@ -12,6 +12,7 @@
 #import "NSString+BaseString.h"
 #import "SSLocation.h"
 #import "UIColor+HxColor.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -30,15 +31,19 @@
     [[SSLocation sharedLocation] startLocation];
     [self setupAppearance];
     
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     return YES;
 }
 
 -(void)setupAppearance{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor hxStringToColor:@"397Ec5"]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor hxStringToColor:@"2366C4"]];
+    [UINavigationBar appearance].translucent = NO;
+    
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"ic_back"]];
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    [[UIBarButtonItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+//    [[UIBarButtonItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
 }
 
 

@@ -9,9 +9,6 @@
 #ifndef SSMacro_h
 #define SSMacro_h
 
-static NSString *kLoginSucess = @"loginSucess";
-static NSString *kLoginCancel = @"loginCancel";
-
 static NSString *kUserData = @"UserData";       // 用户信息key
 static NSString *kLoginKey = @"LoginKey";       // 是否登录key
 static NSString *kRemeberPwd = @"RemeberPwd";   // 记住密码key
@@ -19,6 +16,8 @@ static NSString *kPasswordData = @"Password";       // 记住密码后保存的�
 
 static NSString *kLocationCity = @"LocationCity";   // 定位城市
 static NSString *kWeatherData = @"WeatherData";     // 天气数据
+
+static NSString *kGetLocationNotify = @"GetLocationNotify";   // 获取到定位后的通知
 
 static NSString *kPeripheral = @"Peripheral";   // 空气净化器外设 连接后保存，下次打开直接连接
 

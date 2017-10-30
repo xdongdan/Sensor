@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *wind;
 @property (weak, nonatomic) IBOutlet UILabel *location;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @property (nonatomic, strong) SSWeather *data;
 @property (nonatomic, strong) NSString *city;
@@ -41,19 +42,49 @@
         [strongSelf loadData];
     }];
     self.progressView.persentage = 0;
+    
+    if (ScreenWidth == 320) {
+        self.bottomConstraint.constant = 10;
+        self.topConstraint.constant = 40;
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self showTabBar];
-    self.location.text = self.city;
-    [self loadData];
+    
+    if (CHECK_VALID_STRING(self.city)) {
+        self.location.text = self.city;
+        [self loadData];
+    } else {
+        [self yuy_hudShowLoading:@"获取定位中"];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getLocationNotify) name:kGetLocationNotify object:nil];
+    }
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)getLocationNotify {
+    if (CHECK_VALID_STRING(self.city)) {
+        return;
+    }
+    self.city = [[NSUserDefaults standardUserDefaults] valueForKey:kLocationCity];
+    if (CHECK_VALID_STRING(self.city)) {
+        [self yuy_hudHide];
+        self.location.text = self.city;
+        [self loadData];
+    } else {
+        [self yuy_hudHide];
+        [self yuy_hudAuto:@"获取定位失败"];
+    }
 }
 
 - (void)loadData {
-    [self yuy_hudShowLoading];
     if (CHECK_VALID_STRING(self.city)) {
+        [self yuy_hudShowLoading];
         NSMutableDictionary *data = [@{@"city": self.city} mutableCopy];
         if ([SSUserManager userManager].isLogin) {
             [data setObject:[SSUserManager userManager].user.token forKey:@"token"];

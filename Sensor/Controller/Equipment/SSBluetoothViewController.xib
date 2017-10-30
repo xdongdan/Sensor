@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-vb-Vij">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="yfP-vc-7yl"/>
@@ -34,7 +34,7 @@
                 <constraint firstItem="VNf-vb-Vij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VNM-Sj-fDj"/>
                 <constraint firstAttribute="bottom" secondItem="VNf-vb-Vij" secondAttribute="bottom" id="ZIX-Vk-44W"/>
                 <constraint firstAttribute="trailing" secondItem="VNf-vb-Vij" secondAttribute="trailing" id="foc-cB-Ohc"/>
-                <constraint firstItem="VNf-vb-Vij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="g9R-xe-q8X"/>
+                <constraint firstItem="VNf-vb-Vij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g9R-xe-q8X"/>
             </constraints>
         </view>
     </objects>

@@ -89,7 +89,7 @@ static NSString *kPeripheralName = @"BLE-UART";
 // advertisementData：广播的值，一般携带设备名，serviceUUIDs等信息
 // RSSI：绝对值越大，表示信号越差，设备离得越远。如果想转换成百分比强度，(RSSI+100)/100
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
-    if (![self.peripheralArray containsObject:peripheral]) {
+    if (![self.peripheralArray containsObject:peripheral] && peripheral.name) {
         [self.peripheralArray addObject:peripheral];
         if (self.delegate && [self.delegate respondsToSelector:@selector(findPeripherals:)]) {
             [self.delegate findPeripherals:self.peripheralArray];

@@ -67,6 +67,9 @@
     self.averaeArray = [NSMutableArray array];
 
     NSDictionary *data = [[NSUserDefaults standardUserDefaults] valueForKey:kWeatherData];
+    if (!data) {
+        return;
+    }
     SSWeather *weather = [SSWeather mj_objectWithKeyValues:data];
     self.weatherLabel.text = [NSString stringWithFormat:@"%@   %@   %@%@   %@   %@", weather.city, weather.weather, weather.winddirect, weather.windpower, weather.pm2_5, weather.quality];
     // Do any additional setup after loading the view from its nib.
